@@ -1,0 +1,121 @@
+musteri_adi,email,telefon,sehir,yas,maas,islem_tutari,musteri_segmenti,urun_tipi,aktif_mi,vip,hesap_acilis_tarihi,son_islem_tarihi,notlar
+Öğr. Üçgül Safinaz Akdeniz,ralph79@example.org,(641)972 1729,Ankara,45,,109.77,Ticari,Sigorta,True,False,2024-08-30 05:50:55.462184896,2027-04-22 05:50:55.462184896,Teminat mevcut
+Fadıla Badegül Akçay,mryan@example.com,0413 117 63 40,Gaziantep,42,9821.5,1542.59,Kurumsal,Mevduat,False,True,2018-05-12 13:30:45.378151264,2021-02-20 13:30:45.378151264,Risk skoru düşük
+Muarra Ertaş Alemdar,mlong@example.com,0622 559 29 26,Bursa,56,8500.0,,Bireysel,Yatırım,False,False,2017-04-08 14:31:15.630252104,2017-11-06 14:31:15.630252104,
+Duha Ülker,ymckee@example.net,0813 200 13 37,İzmir,50,11969.66,,Ticari,Kredi,False,False,2023-10-28 08:28:14.117647072,2026-08-05 08:28:14.117647072,Kredi başvurusu beklemede
+Edgübay Manço,lewisbenjamin@example.org,,İstanbul,18,8500.0,4225.88,Kurumsal,Kredi,True,True,2021-04-20 16:20:10.084033600,2022-05-18 16:20:10.084033600,Teminat mevcut
+Nihai Sezer,brittany20@example.org,+90(757)4418891,İstanbul,44,11161.25,1285.17,Ticari,Kredi,True,False,2015-05-03 18:09:04.537815126,2015-07-10 18:09:04.537815126,Pasif hesap
+Hoşkadem Arsoy,davismark@example.org,+90(948)222-1251x546,İstanbul,30,9475.79,736.95,Ticari,Kredi,False,True,2016-01-04 06:27:13.613445376,2017-06-13 06:27:13.613445376,Teminat mevcut
+Bayan Vacibe Şama Şafak,duartescott@example.com,0265-151 4356,Adana,58,9137.95,1546.24,Ticari,Kredi,True,False,2015-04-03 01:36:48.403361344,2019-02-03 01:36:48.403361344,Şube yönlendirmesi
+Mihin Şener,eric39@example.net,+90(569)1173781,İzmir,20,8500.0,919.43,Ticari,Kredi,True,True,2022-06-24 07:51:55.966386560,2025-03-31 07:51:55.966386560,
+Nesip Yayak Çetin,ikim@example.com,,Bursa,56,12438.34,1183.22,Ticari,Kredi,True,False,2019-12-16 15:43:51.932773120,2022-07-23 15:43:51.932773120,
+Refet Alize Demir,eileendowns@example.com,08976230495,İstanbul,23,,4257.19,Ticari,Kredi,True,True,2021-07-21 17:56:58.487394944,2025-07-10 17:56:58.487394944,Risk skoru düşük
+Vâlâ Ğanim Sezer,jennifer85@example.com,+90 (985) 8804843,Gaziantep,25,10690.38,731.89,Kurumsal,Mevduat,False,True,2024-10-30 14:55:27.731092416,2026-11-20 14:55:27.731092416,Pasif hesap
+Yrd. Doç. Mukbile Çilga Şafak,hharrison@example.com,+90(146)5122901,Adana,44,8500.0,4873.64,Bireysel,Kredi,True,False,2022-07-25 00:24:12.100840320,2025-11-20 00:24:12.100840320,
+Öğr. Müveddet Banü Akdeniz,andreafisher@example.com,+90(910)1964948,İstanbul,26,8500.0,3536.36,Bireysel,Mevduat,False,False,2023-06-27 14:19:09.579831936,2023-08-11 14:19:09.579831936,Dijital kanal tercihi
+Ziyaettin Mansız,aandrews@example.com,+90(635)911-6399x508,İstanbul,54,8500.0,326.84,Kurumsal,Mevduat,True,True,2024-06-29 20:46:23.193277312,2025-12-03 20:46:23.193277312,Pasif hesap
+Çev. Mürit Abdulgazi Aksu,santoschristopher@example.org,+90(868)435-1972x6284,İstanbul,50,8500.0,107.83,KOBİ,Yatırım,True,False,2020-12-18 22:11:05.546218496,2025-01-05 22:11:05.546218496,
+Gülsevil Begim Yorulmaz Dumanlı,anthonyanthony@example.com,+90(670)556-3871x6482,Ankara,59,11568.69,159.34,Ticari,Kredi,True,True,2018-12-13 09:16:38.319327728,2022-02-16 09:16:38.319327728,Şube yönlendirmesi
+Öğr. Koşukhan Gençay Dumanlı,hsmith@example.net,+90 (860) 4459959,İzmir,61,13223.46,27.58,Ticari,Sigorta,False,False,2021-05-21 08:52:26.218487392,2023-11-30 08:52:26.218487392,Kredi başvurusu beklemede
+Prof. Cihandide Abdiş Zengin,weissjessica@example.com,0160-272 8736,Ankara,41,9030.07,148.81,Bireysel,Yatırım,True,False,2018-09-12 07:39:49.915966384,2019-08-18 07:39:49.915966384,Risk skoru düşük
+Yrd. Doç. Mefarettin Tecimer Erdoğan,dmoon@example.net,+90(444)5018946,İstanbul,32,8881.55,1723.31,Bireysel,Kredi,True,False,2021-10-21 19:33:46.890756288,2023-11-28 19:33:46.890756288,Dijital kanal tercihi
+Doç. Ruhsat Seven,jamiereynolds@example.org,+90 (074) 7354648,İzmir,49,9839.01,110.77,Ticari,Sigorta,True,True,2023-02-24 20:10:05.042016800,2026-07-01 20:10:05.042016800,Şube yönlendirmesi
+Süleyla Bilge,vkirk@example.net,0953 707 71 10,İstanbul,49,14160.6,576.24,Bireysel,Kredi Kartı,False,False,2015-09-03 12:18:09.075630252,2017-03-31 12:18:09.075630252,
+Baba Türk,gutierrezrobert@example.net,+90(516)375-7628x932,İstanbul,41,8500.0,2795.29,Ticari,Kredi,True,True,2017-03-08 21:58:59.495798320,2018-05-25 21:58:59.495798320,
+Rasul Kısakürek,larryrobles@example.com,+90(665)0214187,Ankara,58,19760.51,35.32,Bireysel,Kredi,False,False,2017-06-08 23:35:47.899159664,2018-03-15 23:35:47.899159664,Şube yönlendirmesi
+Derkay Aksu,jthomas@example.org,+90 (645) 9310199,Ankara,29,8500.0,2526.8,Kurumsal,Sigorta,True,True,2022-04-23 22:47:23.697478976,2024-06-19 22:47:23.697478976,Düzenli ödeme yapıyor
+Öğr. Hilayda Yücel Güçlü,iking@example.net,+90 (164) 4627929,Antalya,56,8628.53,496.63,Kurumsal,Yatırım,True,True,2016-02-03 22:59:29.747899160,2019-05-12 22:59:29.747899160,Risk skoru düşük
+Dr. Adıgün Vaysal Şafak,jesusscott@example.net,03052029500,İstanbul,19,,188.63,Ticari,Kredi,True,False,2017-10-09 17:44:52.436974784,2021-05-28 17:44:52.436974784,Pasif hesap
+Güldam Sabihe İhsanoğlu Ülker,michelleking@example.org,,İzmir,20,8500.0,1789.73,Ticari,Kredi,True,False,2019-04-15 03:25:42.857142864,2023-04-23 03:25:42.857142864,Yeni müşteri
+Yalgın Arslan,scastillo@example.net,+90 (329) 0608943,İzmir,54,10129.61,1487.1,Bireysel,Mevduat,True,False,2022-11-24 18:33:16.638655456,2025-11-20 18:33:16.638655456,Kredi başvurusu beklemede
+İdiris Aksu,hawkinsroger@example.net,+90 (424) 6114344,İstanbul,34,8942.0,3149.12,KOBİ,Mevduat,True,False,2020-10-18 13:06:33.277310912,2023-02-08 13:06:33.277310912,Yeni müşteri
+Bayan Çisem Ayyaruk Bilgin,ronald74@example.net,+90(692)623-4628x693,İzmir,19,8500.0,1992.44,Ticari,Yatırım,True,False,2018-02-09 11:53:56.974789920,2018-04-08 11:53:56.974789920,Pasif hesap
+Okt. Huban Züheyla Akça Yıldırım,rodrigueztamara@example.org,+90(943)975-2466x4395,İstanbul,19,8500.0,2440.49,Bireysel,Mevduat,False,False,2021-12-22 04:38:19.159663872,2024-09-04 04:38:19.159663872,Pasif hesap
+Fadile Demir Karadeniz,baxtersierra@example.com,07807345741,İstanbul,45,8500.0,497.0,Kurumsal,Mevduat,True,True,2019-02-12 18:21:10.588235296,2020-07-02 18:21:10.588235296,Risk skoru düşük
+Mürit Bilir,dawn10@example.com,+90(177)8309707,Konya,40,8500.0,293.0,KOBİ,Yatırım,True,False,2015-07-04 03:13:36.806722688,2016-06-15 03:13:36.806722688,Pasif hesap
+Çev. Minibe Nurtaç Yüksel,andrewvazquez@example.net,+90 (851) 7877566,Gaziantep,54,9460.46,2083.13,Kurumsal,Kredi,False,False,2019-10-16 06:39:19.663865536,2020-07-16 06:39:19.663865536,
+Enes Şerafeddin Demirel,jesse63@example.com,+90(355)1440980,Antalya,49,12369.2,2466.31,KOBİ,Kredi,True,False,2022-03-24 06:15:07.563025216,2024-05-09 06:15:07.563025216,Düzenli ödeme yapıyor
+Öğr. Akif Akça,perezsandra@example.org,+90 (758) 8158610,Ankara,50,10642.28,6985.51,Ticari,Yatırım,True,False,2017-08-09 08:40:20.168067232,2019-08-05 08:40:20.168067232,Dijital kanal tercihi
+Aylil Duran Şener,gillespiecourtney@example.com,00169174941,İstanbul,18,8500.0,798.12,Bireysel,Sigorta,False,False,2021-02-18 07:15:37.815126048,2021-12-16 07:15:37.815126048,Pasif hesap
+Afife Gülev Duran,charles66@example.org,09018368226,Bursa,36,8500.0,697.87,Kurumsal,Mevduat,True,True,2024-11-30 07:27:43.865546240,2029-01-01 07:27:43.865546240,Yeni müşteri
+Miyesser Vecide Şama Akgündüz,mason76@example.com,+90 (438) 9211119,Ankara,19,8500.0,2246.93,KOBİ,Mevduat,True,False,2016-03-05 15:31:45.882352944,2019-09-18 15:31:45.882352944,Pasif hesap
+Dr. Soykan Sabır İhsanoğlu Demir,qtaylor@example.org,505 8 340,İstanbul,61,9548.43,625.1,Bireysel,Kredi,True,True,2024-07-30 13:18:39.327731072,2025-09-09 13:18:39.327731072,
+Yalazabay Kotuz Güçlü Zorlu,taylorsmith@example.org,06417560447,Ankara,43,9061.18,4005.21,Bireysel,Mevduat,False,False,2020-07-18 11:29:44.873949568,2021-05-09 11:29:44.873949568,Düzenli ödeme yapıyor
+Ahsen Çokan Aslan Tevetoğlu,danielle90@example.org,(913)369 9549,İstanbul,49,9974.63,2932.26,Bireysel,Mevduat,True,False,2016-06-05 17:08:34.285714288,2019-01-16 17:08:34.285714288,
+Doç. Güllühan Ertaş Akgündüz,perezlaura@example.net,385 5 393,Konya,23,8500.0,840.53,KOBİ,Kredi,True,False,2021-03-20 23:47:53.949579840,2023-10-26 23:47:53.949579840,
+Öncel Durmuş,qtaylor@example.com,+90 (491) 1026727,İstanbul,49,10873.36,2084.68,Kurumsal,Kredi,False,True,2024-01-28 10:05:02.521008416,2027-12-10 10:05:02.521008416,Teminat mevcut
+Emiş Bilir Yaman,rachel00@example.net,0137 523 74 42,Bursa,21,8500.0,,Bireysel,Mevduat,False,False,2015-06-03 10:41:20.672268908,2016-06-06 10:41:20.672268908,
+Asu Tevetoğlu,joshua75@example.com,+90(817)930-1573x089,Ankara,28,8849.15,163.26,Ticari,Kredi,True,True,2022-09-24 09:28:44.369747904,2023-11-16 09:28:44.369747904,Teminat mevcut
+Özyurt Duran,newtonrandy@example.org,0582-698 7075,İzmir,34,9961.41,3492.67,Bireysel,Mevduat,True,False,2018-01-09 19:21:40.840336128,2019-09-07 19:21:40.840336128,Şube yönlendirmesi
+Öğr. Maşide Mehdiye Zorlu,allen19@example.net,0720-791 5952,İzmir,55,8500.0,1055.56,Kurumsal,Kredi,True,True,2016-11-06 03:49:54.957983192,2016-12-08 03:49:54.957983192,Kredi başvurusu beklemede
+Av. Söyler Yücel Yaman,fisherjimmy@example.org,+90 (618) 7631964,İstanbul,41,8500.0,2627.0,KOBİ,Mevduat,True,False,2020-03-17 17:20:40.336134464,2024-04-07 17:20:40.336134464,Kampanya kapsamında
+Av. Yalın Sakarya,tracey50@example.org,,Gaziantep,22,8500.0,578.6,KOBİ,Kredi,True,False,2023-09-27 15:55:57.983193280,2027-01-04 15:55:57.983193280,
+Satıa Seven Akar,moorecynthia@example.org,+90(796)2855609,Antalya,51,11741.36,3388.19,Ticari,Sigorta,True,True,2017-07-09 16:08:04.033613440,2018-08-18 16:08:04.033613440,Dijital kanal tercihi
+Av. Risalet Müsemma Arsoy,heathermontgomery@example.net,+90 (420) 9792313,Konya,23,8500.0,739.48,Bireysel,Yatırım,False,False,2015-08-03 19:45:52.941176472,2016-07-21 19:45:52.941176472,
+Maksur Arslan,cmiller@example.org,+90 (954) 0698749,Adana,39,19358.19,16.35,Bireysel,Yatırım,False,False,2020-08-18 04:02:01.008403360,2021-02-09 04:02:01.008403360,Yüksek potansiyel
+Emine. Duyguhan Şama Zorlu,emmajefferson@example.com,+90(911)120-4512x5644,İzmir,28,8500.0,3536.86,Bireysel,Sigorta,True,False,2022-12-25 11:05:32.773109248,2023-11-12 11:05:32.773109248,Şube yönlendirmesi
+Niğmet Durdu,shane57@example.org,0906 518 54 41,Konya,65,16406.7,143.59,KOBİ,Mevduat,False,False,2016-04-05 08:04:02.016806720,2017-07-10 08:04:02.016806720,
+Zilfa Durmuş İhsanoğlu,nicolethomas@example.net,09639963588,İstanbul,33,9462.01,576.98,KOBİ,Kredi,True,False,2022-10-25 02:01:00.504201664,2024-10-28 02:01:00.504201664,Kredi başvurusu beklemede
+Sarıcabay Yaman,btaylor@example.net,+90(770)155-8186x0600,İstanbul,50,11954.17,4495.46,Kurumsal,Mevduat,False,False,2018-11-12 16:44:22.184873952,2021-07-17 16:44:22.184873952,Teminat mevcut
+Yrd. Doç. Rana Eraslan Bilgin,leeveronica@example.com,+90(333)015-7428x8562,İstanbul,26,,4511.92,Kurumsal,Yatırım,True,False,2024-03-29 19:09:34.789915968,2025-12-03 19:09:34.789915968,Yeni müşteri
+Salimet Muhiye Demir,beckdavid@example.com,0591 740 43 65,Ankara,23,8500.0,1278.0,Ticari,Yatırım,True,False,2023-01-25 03:37:48.907563008,2024-03-28 03:37:48.907563008,Yüksek potansiyel
+Çağdan Bilgin,jacobsonsamuel@example.net,+90(274)375-1166x6846,Ankara,33,8500.0,1498.85,KOBİ,Mevduat,False,False,2019-09-15 14:07:03.529411776,2022-01-08 14:07:03.529411776,Kredi başvurusu beklemede
+Dr. Hacile Arziye Mansız Türk,owensdonna@example.org,0190 701 91 45,İstanbul,46,8500.0,892.52,Kurumsal,Kredi,True,True,2015-10-04 04:50:25.210084032,2019-08-01 04:50:25.210084032,Kredi başvurusu beklemede
+Rıfkıye Hançer Ergül,graystuart@example.net,,Antalya,20,8500.0,,KOBİ,Kredi,True,False,2021-08-21 10:29:14.621848736,2024-05-10 10:29:14.621848736,
+Özay Menişan Sakarya Dumanlı,chelseanichols@example.com,+90(057)483-7693x0409,Ankara,37,8500.0,597.73,Bireysel,Mevduat,True,False,2021-06-21 01:24:42.352941184,2024-09-26 01:24:42.352941184,Şube yönlendirmesi
+Öğr. Ecemiş Kısakürek,torressusan@example.org,686 3 395,İstanbul,53,17543.98,1674.49,Ticari,Yatırım,True,True,2019-01-13 01:48:54.453781504,2019-08-17 01:48:54.453781504,Yüksek potansiyel
+Hüsmen Ergül,debra44@example.org,(060)738 0629,İzmir,36,8500.0,2093.76,Bireysel,Yatırım,True,False,2023-04-27 05:14:37.310924384,2023-07-26 05:14:37.310924384,Risk skoru düşük
+Bayan Ünsever Elgin Duran Yorulmaz,patelelizabeth@example.com,00793513436,İstanbul,43,10658.78,2352.29,Kurumsal,Mevduat,True,True,2020-11-18 05:38:49.411764704,2023-07-14 05:38:49.411764704,Kampanya kapsamında
+Irıs Şener Hayrioğlu,marisa38@example.org,00482864464,Antalya,20,8500.0,2338.25,Ticari,Kredi Kartı,True,True,2016-07-06 09:40:50.420168064,2020-06-08 09:40:50.420168064,Risk skoru düşük
+Gülzadiye Şendoğan Çetin,twhite@example.net,(577)523 8475,İstanbul,36,8500.0,143.46,Bireysel,Yatırım,True,False,2015-12-04 13:54:57.478991596,2017-12-12 13:54:57.478991596,
+Kırgız Gülşahin Akçay,maryjones@example.com,+90 (480) 1902890,Gaziantep,37,10666.85,1023.07,Ticari,Kredi,True,False,2024-02-28 02:37:18.655462208,2026-06-13 02:37:18.655462208,Yüksek potansiyel
+Çev. Hurican Yaman Arslan,michaelsmith@example.com,+90(258)139-0443x2111,Antalya,49,,88.92,Ticari,Kredi,True,False,2018-08-12 15:07:33.781512608,2022-09-13 15:07:33.781512608,Risk skoru düşük
+Öğr. Cebesoy Günaydin Korutürk,omiller@example.org,(976)255 2488,İstanbul,24,8500.0,1196.19,Bireysel,Kredi,False,False,2015-03-03 09:04:32.268907563,2018-12-04 09:04:32.268907563,
+Bayan Menişan Şazime Mansız,gabrielaberry@example.com,(306)243 2228,İstanbul,58,9454.09,873.83,Bireysel,Kredi,True,False,2017-11-09 10:17:08.571428576,2021-07-26 10:17:08.571428576,Düzenli ödeme yapıyor
+Ahter Çetin,jeremymartin@example.net,0218 694 15 77,Antalya,50,12038.79,3279.93,Ticari,Kredi,True,False,2023-03-27 12:42:21.176470592,2027-01-22 12:42:21.176470592,Teminat mevcut
+Nazlihan Yaman Duran,gregorymatthew@example.org,+90(655)0016254,Bursa,57,9208.9,648.29,Ticari,Kredi,True,True,2017-01-06 12:54:27.226890752,2017-02-15 12:54:27.226890752,Düzenli ödeme yapıyor
+Kopan Sezer,gainespatrick@example.com,01421026910,Bursa,56,11849.38,186.76,KOBİ,Kredi,False,False,2018-06-12 06:03:01.512605040,2021-07-01 06:03:01.512605040,Pasif hesap
+Eraycan Tuyuğ Akgündüz Akdeniz,sandrawilson@example.net,05806891955,Antalya,35,8500.0,231.46,Ticari,Kredi,True,False,2018-07-12 22:35:17.647058816,2019-03-24 22:35:17.647058816,Risk skoru düşük
+Boynak Tevetoğlu,gramirez@example.net,+90(343)9912482,İstanbul,57,9445.2,2150.15,KOBİ,Sigorta,True,False,2020-01-16 08:16:08.067226880,2023-05-06 08:16:08.067226880,
+Paksu Çamurcuoğlu,anthonyflores@example.org,0822 864 14 77,Ankara,18,10031.83,1444.36,Ticari,Kredi,True,False,2015-01-01 00:00:00.000000000,2016-08-16 00:00:00.000000000,Pasif hesap
+Idık Tarhan,davisdavid@example.org,+90(656)813-6068x851,İstanbul,28,8500.0,159.91,Ticari,Mevduat,True,False,2016-05-06 00:36:18.151260504,2018-07-16 00:36:18.151260504,Yeni müşteri
+Gülözge Minibe Demirel Ülker,operkins@example.org,+90(531)148-3910x386,Adana,45,8500.0,131.78,KOBİ,Mevduat,True,False,2023-07-28 06:51:25.714285728,2027-04-21 06:51:25.714285728,Dijital kanal tercihi
+Doç. Anargül Muarra Ertaş,jvillegas@example.org,02613526572,İzmir,42,8959.36,1810.81,Bireysel,Kredi Kartı,False,False,2022-05-24 15:19:39.831932768,2024-11-23 15:19:39.831932768,Yeni müşteri
+Nurkan Enginiz Alemdar Şafak,dbrown@example.com,00412633498,Ankara,40,8500.0,113.32,Bireysel,Kredi,False,False,2022-02-21 13:42:51.428571424,2025-09-09 13:42:51.428571424,Yüksek potansiyel
+Teknaz Sezer Akça,valerie70@example.com,0034 791 35 25,İstanbul,48,12157.3,2587.78,Bireysel,Mevduat,True,False,2020-06-17 18:57:28.739495808,2024-05-06 18:57:28.739495808,Kredi başvurusu beklemede
+Âlemşah Akçay,tiffanymarshall@example.net,+90 (329) 1975351,Ankara,47,8500.0,1837.5,KOBİ,Kredi Kartı,True,False,2024-04-29 11:41:50.924369728,2028-02-11 11:41:50.924369728,Teminat mevcut
+Prof. Aynilhayat Anka Güçlü,ronaldwatson@example.net,0120-129 0794,Ankara,59,11455.79,,Ticari,Sigorta,False,True,2021-01-18 14:43:21.680672256,2024-03-23 14:43:21.680672256,Risk skoru düşük
+Şinasi Gül,ptran@example.net,(324)268 5267,Bursa,52,11914.96,132.98,KOBİ,Sigorta,True,False,2024-09-29 22:23:11.596638656,2025-06-11 22:23:11.596638656,
+Bilgen Demirel,michaelmartin@example.com,+90(688)8253721,İzmir,24,8500.0,6473.19,Bireysel,Kredi,True,False,2021-09-21 03:01:30.756302528,2024-01-23 03:01:30.756302528,
+Deniz Durmuş,tracy57@example.net,317 9 123,Adana,33,8500.0,703.26,Bireysel,Kredi,True,False,2021-11-21 12:06:03.025210080,2022-07-26 12:06:03.025210080,Şube yönlendirmesi
+Kınel Kısakürek,jesse76@example.org,745 8 413,Ankara,43,8500.0,694.58,Bireysel,Yatırım,True,False,2016-08-06 02:13:06.554621848,2019-03-30 02:13:06.554621848,Dijital kanal tercihi
+Ballı İhsan Yılmaz Şensoy,robertstimothy@example.com,340 2 808,İstanbul,65,11575.16,2513.36,Bireysel,Kredi Kartı,True,False,2023-05-27 21:46:53.445378144,2025-07-17 21:46:53.445378144,Kampanya kapsamında
+Melaha Demir Durmuş,moralessarah@example.net,+90(537)726-5773x923,Bursa,19,8500.0,4413.25,Ticari,Yatırım,True,True,2017-09-09 01:12:36.302521008,2019-02-26 01:12:36.302521008,Kampanya kapsamında
+Av. Çalım Türk Dumanlı,wharris@example.net,0777 751 31 97,Antalya,18,8896.36,6403.16,Bireysel,Yatırım,False,False,2019-08-15 21:34:47.394957984,2020-05-29 21:34:47.394957984,Kampanya kapsamında
+Arş. Gör. Güldam Dumanlı Şener,debrapollard@example.com,(015)925 1557,İzmir,65,14214.95,2099.85,Bireysel,Kredi,False,False,2020-09-17 20:34:17.142857152,2020-12-09 20:34:17.142857152,Risk skoru düşük
+Tenvir Onurcan Seven İnönü,jasonmartinez@example.com,+90(349)755-6440x373,Antalya,29,8500.0,708.03,Kurumsal,Sigorta,True,True,2016-10-06 11:17:38.823529408,2019-10-11 11:17:38.823529408,Kampanya kapsamında
+Uz. Abdiş Yağın İnönü,chammond@example.org,0057-865 2393,Ankara,22,8500.0,130.79,Bireysel,Kredi,True,False,2016-12-06 20:22:11.092436976,2019-01-01 20:22:11.092436976,
+Necilal Şama,kimberlymaldonado@example.org,06097327598,İzmir,54,17166.47,2251.86,Ticari,Mevduat,False,True,2019-07-16 05:02:31.260504208,2021-07-03 05:02:31.260504208,Düzenli ödeme yapıyor
+Yrd. Doç. Türkmen Baydu Manço,cartercurtis@example.org,+90 (723) 0973092,Ankara,49,12897.4,1226.04,KOBİ,Mevduat,False,False,2024-05-30 04:14:07.058823552,2027-07-26 04:14:07.058823552,
+Elvan Feryas Zorlu Arsoy,millerwilliam@example.com,+90(135)6312001,İstanbul,26,8500.0,828.05,Bireysel,Mevduat,True,False,2018-03-12 04:26:13.109243696,2021-02-17 04:26:13.109243696,Dijital kanal tercihi
+Öğr. İsak Seha Tevetoğlu,sylvia04@example.com,(591)816 7865,İstanbul,58,10147.3,3552.36,Ticari,Kredi,False,False,2019-11-15 23:11:35.798319328,2021-02-05 23:11:35.798319328,Düzenli ödeme yapıyor
+Baytal Durdu,qtrujillo@example.org,0323 078 85 88,İstanbul,52,14200.73,176.82,KOBİ,Kredi,False,False,2023-12-28 17:32:46.386554624,2025-12-16 17:32:46.386554624,Kredi başvurusu beklemede
+Öğr. Sebigül Şener Ülker,kcole@example.com,+90 (953) 0361746,İzmir,36,8500.0,1017.76,Kurumsal,Yatırım,True,True,2023-08-27 23:23:41.848739488,2026-01-22 23:23:41.848739488,Dijital kanal tercihi
+Arş. Gör. Mesude Pekkan Akçay,hallryan@example.net,+90(115)4696770,Ankara,65,14331.46,17.13,Bireysel,Kredi,True,True,2018-04-11 20:58:29.243697472,2018-07-11 20:58:29.243697472,Düzenli ödeme yapıyor
+Turabi Hançer,bryan03@example.net,0661 334 21 05,İzmir,33,8923.9,948.53,Kurumsal,Yatırım,True,False,2015-11-03 21:22:41.344537816,2019-02-13 21:22:41.344537816,Dijital kanal tercihi
+Okt. Ferat Cüneyit Fırat,sheilamckinney@example.org,482 1 810,Konya,20,8500.0,86.93,Ticari,Kredi,True,True,2016-09-05 18:45:22.689075632,2017-05-08 18:45:22.689075632,Kredi başvurusu beklemede
+Yrd. Doç. Arcan Dumanlı,stephaniejones@example.net,000 6 546,İstanbul,37,8500.0,189.74,Bireysel,Mevduat,True,False,2017-05-09 07:03:31.764705888,2017-06-10 07:03:31.764705888,Pasif hesap
+Paker Erdoğan,donaldmason@example.org,06506932560,Ankara,41,8500.0,187.54,Ticari,Mevduat,False,True,2024-12-31 00:00:00.000000000,2025-07-08 00:00:00.000000000,
+Dr. Übeydullah Zamir Akar,utaylor@example.com,(945)168 5485,Antalya,50,8500.0,1571.35,Kurumsal,Kredi,True,True,2017-12-10 02:49:24.705882352,2020-02-28 02:49:24.705882352,Risk skoru düşük
+Dr. Şahıgül Piran Güçlü Yüksel,lgarcia@example.com,+90 (733) 3152106,İstanbul,41,,2055.9,Ticari,Mevduat,True,False,2019-05-15 19:57:58.991596640,2022-07-31 19:57:58.991596640,Risk skoru düşük
+Mutasım Hançer,jyork@example.net,606 6 166,İstanbul,28,8500.0,1313.33,Bireysel,Kredi,True,False,2019-03-15 10:53:26.722689072,2021-09-22 10:53:26.722689072,
+Uçan Yıldırım,sgutierrez@example.net,(034)955 8907,İstanbul,25,9897.23,4912.08,Ticari,Kredi,True,True,2020-05-18 02:25:12.605042016,2023-07-04 02:25:12.605042016,Kampanya kapsamında
+Buhari Erdoğan,karen55@example.com,02033533048,İstanbul,53,8500.0,704.69,Bireysel,Kredi Kartı,False,True,2023-11-28 01:00:30.252100832,2024-11-20 01:00:30.252100832,
+Nevsale Nurda Zorlu,jessicamccoy@example.net,07492538800,Konya,55,9679.87,,Bireysel,Mevduat,True,False,2019-06-15 12:30:15.126050416,2021-02-13 12:30:15.126050416,Yeni müşteri
+Öğr. Görsev Necva Ülker Ergül,maria69@example.com,+90(133)102-9371x745,Antalya,57,11792.22,3044.25,Bireysel,Sigorta,True,False,2015-01-31 16:32:16.134453781,2018-12-11 16:32:16.134453781,Kampanya kapsamında
+Günsel Akçay Öcalan,petersoncrystal@example.org,0473-826 0294,İzmir,37,11723.82,379.62,Bireysel,Kredi,True,False,2020-04-17 09:52:56.470588224,2023-11-28 09:52:56.470588224,
+Mihriye Oluş Akça Aslan,martinezbenjamin@example.net,094 9 238,Adana,52,8500.0,4954.31,Bireysel,Yatırım,True,False,2018-10-13 00:12:06.050420160,2021-06-20 00:12:06.050420160,Yüksek potansiyel
+Mesude Rayla Hançer,matthewstephens@example.com,,Antalya,65,16489.49,18.34,Bireysel,Sigorta,True,False,2020-02-16 00:48:24.201680672,2023-11-23 00:48:24.201680672,
+Hazrat Bilir,cooklucas@example.org,02315402639,İstanbul,42,8500.0,5253.79,Ticari,Yatırım,True,False,2022-08-24 16:56:28.235294112,2024-06-18 16:56:28.235294112,Düzenli ödeme yapıyor
+Okt. Yurtseven Tangül Soylu Sezgin,blakehill@example.org,+90(248)8833178,Adana,52,8500.0,66.18,Bireysel,Mevduat,True,False,2022-01-21 21:10:35.294117632,2024-11-03 21:10:35.294117632,Dijital kanal tercihi
+Prof. Baytal Seven,gonzalespeter@example.com,(484)320 2693,İzmir,42,9786.31,3326.58,Bireysel,Mevduat,True,False,2017-02-06 05:26:43.361344536,2020-07-08 05:26:43.361344536,Yeni müşteri
