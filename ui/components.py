@@ -116,7 +116,11 @@ def stats_comparison(original_df: pd.DataFrame, generated_df: pd.DataFrame):
 
             with c1:
                 st.write("**Orijinal**")
-                if pd.api.types.is_numeric_dtype(original_df[col]):
+                if pd.api.types.is_bool_dtype(original_df[col]):
+                    vc = original_df[col].value_counts()
+                    st.write(f"True: {vc.get(True, 0)}, False: {vc.get(False, 0)}")
+                    st.bar_chart(vc)
+                elif pd.api.types.is_numeric_dtype(original_df[col]):
                     st.write(original_df[col].describe().round(2))
                 else:
                     vc = original_df[col].value_counts().head(10)
@@ -125,7 +129,11 @@ def stats_comparison(original_df: pd.DataFrame, generated_df: pd.DataFrame):
 
             with c2:
                 st.write("**Üretilen**")
-                if pd.api.types.is_numeric_dtype(generated_df[col]):
+                if pd.api.types.is_bool_dtype(generated_df[col]):
+                    vc = generated_df[col].value_counts()
+                    st.write(f"True: {vc.get(True, 0)}, False: {vc.get(False, 0)}")
+                    st.bar_chart(vc)
+                elif pd.api.types.is_numeric_dtype(generated_df[col]):
                     st.write(generated_df[col].describe().round(2))
                 else:
                     vc = generated_df[col].value_counts().head(10)
