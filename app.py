@@ -4,6 +4,12 @@ A tool that analyzes uploaded datasets and generates realistic mock data
 with the same structure, distributions, and relationships.
 """
 
+import sys
+from pathlib import Path
+
+# Ensure project root is in Python path (needed for Streamlit Cloud)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 import streamlit as st
 
 st.set_page_config(
@@ -17,24 +23,24 @@ st.set_page_config(
 def main():
     # Title
     st.title("Mock Data Generator")
-    st.caption("Upload your data, analyze its structure, and generate realistic mock datasets.")
+    st.caption("Verinizi yükleyin, yapısını analiz edin ve aynı yapıda gerçekçi sentetik veri üretin.")
 
     # Initialize session state
     if "step" not in st.session_state:
         st.session_state["step"] = 1
 
     # Step indicator
-    steps = ["Upload", "Configure", "Generate"]
+    steps = ["Yükleme", "Yapılandırma", "Üretim"]
     current_step = st.session_state["step"]
 
     cols = st.columns(3)
     for i, (col, step_name) in enumerate(zip(cols, steps), 1):
         if i == current_step:
-            col.markdown(f"**:blue[Step {i}: {step_name}]**")
+            col.markdown(f"**:blue[Adım {i}: {step_name}]**")
         elif i < current_step:
-            col.markdown(f"~~Step {i}: {step_name}~~")
+            col.markdown(f"~~Adım {i}: {step_name}~~")
         else:
-            col.markdown(f"Step {i}: {step_name}")
+            col.markdown(f"Adım {i}: {step_name}")
 
     st.divider()
 
@@ -50,5 +56,4 @@ def main():
         render()
 
 
-if __name__ == "__main__":
-    main()
+main()

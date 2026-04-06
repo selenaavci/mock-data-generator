@@ -1,4 +1,4 @@
-"""Step 1: File upload page."""
+"""Adım 1: Dosya yükleme sayfası."""
 
 import streamlit as st
 
@@ -7,12 +7,12 @@ from analyzer.schema_analyzer import analyze
 
 
 def render():
-    """Render the upload page."""
-    st.header("Step 1: Upload Your Data")
-    st.write("Upload a CSV or Excel file to analyze its structure and generate mock data with the same schema.")
+    """Yükleme sayfasını render et."""
+    st.header("Adım 1: Verinizi Yükleyin")
+    st.write("Yapısını analiz etmek ve aynı şemada sentetik veri üretmek için bir CSV veya Excel dosyası yükleyin.")
 
     uploaded_file = st.file_uploader(
-        "Choose a file",
+        "Dosya seçin",
         type=["csv", "xlsx", "xls"],
         key="file_uploader",
     )
@@ -22,29 +22,29 @@ def render():
             df = read_upload(uploaded_file)
             st.session_state["original_df"] = df
 
-            st.success(f"File loaded: **{uploaded_file.name}** — {df.shape[0]} rows, {df.shape[1]} columns")
+            st.success(f"Dosya yüklendi: **{uploaded_file.name}** — {df.shape[0]} satır, {df.shape[1]} sütun")
 
-            # Preview
-            st.subheader("Data Preview")
+            # Önizleme
+            st.subheader("Veri Önizleme")
             st.dataframe(df.head(10), use_container_width=True)
 
-            # Column info
+            # Sütun bilgisi
             col1, col2, col3 = st.columns(3)
             with col1:
-                st.metric("Rows", df.shape[0])
+                st.metric("Satır Sayısı", df.shape[0])
             with col2:
-                st.metric("Columns", df.shape[1])
+                st.metric("Sütun Sayısı", df.shape[1])
             with col3:
                 null_pct = df.isnull().sum().sum() / (df.shape[0] * df.shape[1]) * 100
-                st.metric("Missing Values", f"{null_pct:.1f}%")
+                st.metric("Eksik Değerler", f"%{null_pct:.1f}")
 
-            # Analyze button
-            if st.button("Analyze & Configure", type="primary", use_container_width=True):
-                with st.spinner("Analyzing data structure..."):
+            # Analiz butonu
+            if st.button("Analiz Et ve Yapılandır", type="primary", use_container_width=True):
+                with st.spinner("Veri yapısı analiz ediliyor..."):
                     profiles = analyze(df)
                     st.session_state["profiles"] = profiles
                     st.session_state["step"] = 2
                     st.rerun()
 
         except Exception as e:
-            st.error(f"Error reading file: {e}")
+            st.error(f"Dosya okunurken hata oluştu: {e}")

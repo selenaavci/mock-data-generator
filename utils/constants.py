@@ -64,11 +64,11 @@ DEFAULT_LOCALE = "en_US"
 
 # Supported locales
 LOCALE_OPTIONS = {
-    "English": "en_US",
-    "Turkish": "tr_TR",
-    "German": "de_DE",
-    "French": "fr_FR",
-    "Spanish": "es_ES",
+    "İngilizce": "en_US",
+    "Türkçe": "tr_TR",
+    "Almanca": "de_DE",
+    "Fransızca": "fr_FR",
+    "İspanyolca": "es_ES",
 }
 
 # Max rows

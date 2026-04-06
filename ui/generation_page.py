@@ -1,4 +1,4 @@
-"""Step 3: Data generation and export page."""
+"""Adım 3: Veri üretimi ve dışa aktarım sayfası."""
 
 import streamlit as st
 import pandas as pd
@@ -11,7 +11,7 @@ from utils.io_helpers import df_to_csv_bytes, df_to_excel_bytes
 
 
 def _apply_overrides(profiles: list[ColumnProfile], overrides: dict) -> list[ColumnProfile]:
-    """Apply user overrides to profiles."""
+    """Kullanıcı düzenlemelerini profillere uygula."""
     updated = []
     for p in profiles:
         profile = deepcopy(p)
@@ -28,27 +28,27 @@ def _apply_overrides(profiles: list[ColumnProfile], overrides: dict) -> list[Col
 
 
 def render():
-    """Render the generation and export page."""
+    """Üretim ve dışa aktarım sayfasını render et."""
     profiles = st.session_state.get("profiles", [])
     original_df = st.session_state.get("original_df")
     overrides = st.session_state.get("user_overrides", {})
     global_config = st.session_state.get("global_config", {})
 
     if not profiles or original_df is None:
-        st.warning("No data configured. Please go back.")
-        if st.button("Back to Upload"):
+        st.warning("Yapılandırılmış veri bulunamadı. Lütfen geri dönün.")
+        if st.button("Yükleme Sayfasına Dön"):
             st.session_state["step"] = 1
             st.rerun()
         return
 
-    st.header("Step 3: Generated Mock Data")
+    st.header("Adım 3: Üretilen Sentetik Veri")
 
-    # Back button
-    if st.button("< Back to Configuration"):
+    # Geri butonu
+    if st.button("< Yapılandırmaya Dön"):
         st.session_state["step"] = 2
         st.rerun()
 
-    # Apply overrides
+    # Düzenlemeleri uygula
     final_profiles = _apply_overrides(profiles, overrides)
 
     num_rows = global_config.get("num_rows", len(original_df))
@@ -57,9 +57,9 @@ def render():
     correlation_rules = global_config.get("correlation_rules")
     business_rules = global_config.get("business_rules")
 
-    # Generate or use cached
+    # Üret veya önbellekten al
     if "generated_df" not in st.session_state or st.session_state.get("needs_regeneration", True):
-        with st.spinner(f"Generating {num_rows:,} rows of mock data..."):
+        with st.spinner(f"{num_rows:,} satır sentetik veri üretiliyor..."):
             generated_df = generate(
                 profiles=final_profiles,
                 num_rows=num_rows,
@@ -73,50 +73,50 @@ def render():
 
     generated_df = st.session_state["generated_df"]
 
-    # Metrics
+    # Metrikler
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.metric("Rows Generated", f"{len(generated_df):,}")
+        st.metric("Üretilen Satır", f"{len(generated_df):,}")
     with col2:
-        st.metric("Columns", len(generated_df.columns))
+        st.metric("Sütun Sayısı", len(generated_df.columns))
     with col3:
         null_pct = generated_df.isnull().sum().sum() / (generated_df.shape[0] * generated_df.shape[1]) * 100 if generated_df.size > 0 else 0
-        st.metric("Missing Values", f"{null_pct:.1f}%")
+        st.metric("Eksik Değerler", f"%{null_pct:.1f}")
 
-    # Preview
-    st.subheader("Data Preview")
+    # Önizleme
+    st.subheader("Veri Önizleme")
     st.dataframe(generated_df.head(100), use_container_width=True)
 
-    # Download buttons
-    st.subheader("Export")
+    # İndirme butonları
+    st.subheader("Dışa Aktar")
     col1, col2 = st.columns(2)
     with col1:
         csv_bytes = df_to_csv_bytes(generated_df)
         st.download_button(
-            label="Download CSV",
+            label="CSV İndir",
             data=csv_bytes,
-            file_name="mock_data.csv",
+            file_name="sentetik_veri.csv",
             mime="text/csv",
             use_container_width=True,
         )
     with col2:
         if len(generated_df) > 100_000:
-            st.warning("Excel export may be slow for large datasets. Consider CSV.")
+            st.warning("Büyük veri setlerinde Excel dışa aktarımı yavaş olabilir. CSV önerilir.")
         excel_bytes = df_to_excel_bytes(generated_df)
         st.download_button(
-            label="Download Excel",
+            label="Excel İndir",
             data=excel_bytes,
-            file_name="mock_data.xlsx",
+            file_name="sentetik_veri.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             use_container_width=True,
         )
 
-    # Regenerate button
+    # Yeniden üret butonu
     st.divider()
-    if st.button("Regenerate with Same Settings", use_container_width=True):
+    if st.button("Aynı Ayarlarla Yeniden Üret", use_container_width=True):
         st.session_state["needs_regeneration"] = True
         st.rerun()
 
-    # Stats comparison
+    # İstatistik karşılaştırması
     st.divider()
     stats_comparison(original_df, generated_df)
