@@ -161,4 +161,3 @@ New employees need sample datasets to practice analysis and reporting tasks.
 5. User previews generated data
 
 6. User downloads dataset in desired format
-
