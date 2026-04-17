@@ -1,5 +1,3 @@
-"""Başlangıç sayfası: mod seçimi (yükleme / sıfırdan tasarım)."""
-
 import streamlit as st
 
 from utils.streamlit_compat import safe_rerun
