@@ -98,7 +98,6 @@ def render():
         "locale": locale,
         "noise_config": noise_config if noise_config else None,
         "correlation_rules": correlation_rules if correlation_rules else None,
-        "business_rules": business_rules if business_rules else None,
     }
 
     st.divider()
