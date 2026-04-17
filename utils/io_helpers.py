@@ -17,13 +17,16 @@ def read_upload(uploaded_file) -> pd.DataFrame:
 
 
 def df_to_csv_bytes(df: pd.DataFrame) -> bytes:
-    """Convert DataFrame to CSV bytes for download."""
     return df.to_csv(index=False).encode("utf-8")
 
 
 def df_to_excel_bytes(df: pd.DataFrame) -> bytes:
-    """Convert DataFrame to Excel bytes for download."""
     buffer = BytesIO()
     with pd.ExcelWriter(buffer, engine="openpyxl") as writer:
         df.to_excel(writer, index=False, sheet_name="MockData")
     return buffer.getvalue()
+
+
+def df_to_json_bytes(df: pd.DataFrame) -> bytes:
+    """Export DataFrame to pretty-printed JSON records."""
+    return df.to_json(orient="records", force_ascii=False, indent=2, date_format="iso").encode("utf-8")
