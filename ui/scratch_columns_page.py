@@ -1,5 +1,3 @@
-"""Sıfırdan mod — Adım 2: Sütun tanımlama ve tip bazlı yapılandırma."""
-
 import streamlit as st
 
 from analyzer.schema_analyzer import ColumnProfile
@@ -12,7 +10,6 @@ from utils.streamlit_compat import safe_rerun
 
 
 def _scratch_column_card(col: dict, index: int) -> dict:
-    """Render a scratch column card and mutate ``col`` in-place."""
     user_type_keys = list(USER_TYPES.keys())
 
     with st.expander(f"**{col.get('name', f'column_{index+1}')}** — {col.get('user_type')}", expanded=False):
@@ -129,7 +126,6 @@ def _scratch_column_card(col: dict, index: int) -> dict:
 
 
 def _build_profiles(columns: list) -> list:
-    """Convert scratch column definitions to ColumnProfile objects."""
     profiles = []
     for col in columns:
         internal_type, faker_provider = USER_TYPES[col["user_type"]]
@@ -182,9 +178,6 @@ def render():
             noise_config["format_inconsistency_ratio"] = st.slider("Format tutarsızlığı oranı", 0.0, 0.2, 0.02, 0.01)
 
         st.divider()
-        st.subheader("İş Kuralları")
-        rules_text = st.text_area("Pandas sorguları (her satıra bir tane)", value="", height=80, key="scratch_rules")
-        business_rules = [r.strip() for r in rules_text.strip().split("\n") if r.strip()]
 
     # --- Column cards ---
     for i, col in enumerate(columns):
@@ -221,7 +214,6 @@ def render():
             "locale": dataset["locale"],
             "noise_config": noise_config if noise_config else None,
             "correlation_rules": None,
-            "business_rules": business_rules if business_rules else None,
         }
         st.session_state["user_overrides"] = {}
         st.session_state["needs_regeneration"] = True
