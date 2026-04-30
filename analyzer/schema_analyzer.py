@@ -63,8 +63,8 @@ def _is_datetime(series: pd.Series) -> bool:
             sample = series.dropna().head(50)
             if len(sample) == 0:
                 return False
-            pd.to_datetime(sample, format="mixed")
-            return True
+            parsed = pd.to_datetime(sample, format="mixed", errors="coerce")
+            return parsed.notna().sum() / len(sample) >= 0.8
         except (ValueError, TypeError):
             return False
     return False
@@ -112,7 +112,12 @@ def _analyze_categorical(series: pd.Series) -> dict:
 
 def _analyze_datetime(series: pd.Series) -> dict:
     """Compute date range for datetime column."""
-    clean = pd.to_datetime(series.dropna())
+    clean = pd.to_datetime(series.dropna(), format="mixed", errors="coerce").dropna()
+    if len(clean) == 0:
+        return (
+            {"min": "2020-01-01", "max": "2024-12-31"},
+            {"start_date": "2020-01-01", "end_date": "2024-12-31", "sequential": False},
+        )
     stats = {
         "min": str(clean.min()),
         "max": str(clean.max()),

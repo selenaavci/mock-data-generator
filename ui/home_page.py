@@ -1,3 +1,5 @@
+"""Başlangıç sayfası: mod seçimi (yükleme / sıfırdan tasarım)."""
+
 import streamlit as st
 
 from utils.streamlit_compat import safe_rerun
@@ -13,7 +15,7 @@ def render():
     col1, col2 = st.columns(2)
 
     with col1:
-        st.subheader("Mevcut Veriyi Yükle")
+        st.subheader("📂 Mevcut Veriyi Yükle")
         st.write(
             "- CSV veya Excel dosyası yükleyin\n"
             "- Sistem sütun tiplerini otomatik algılar\n"
@@ -25,7 +27,7 @@ def render():
             safe_rerun()
 
     with col2:
-        st.subheader("Sıfırdan Tasarla")
+        st.subheader("✏️ Sıfırdan Tasarla")
         st.write(
             "- Sütunları tek tek tanımlayın\n"
             "- Tip, kısıtlar ve değer aralıklarını siz belirleyin\n"

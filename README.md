@@ -1,163 +1,194 @@
-# Mock Data Generator Agent
+# 🎲 Mock Data Generator Agent
 
-## Overview
-Mock Data Generator Agent is an AI Hub module designed to generate realistic, structured, and configurable synthetic datasets for testing, development, demo, and training purposes.
+## Project Overview
+Mock Data Generator Agent, kullanıcı tarafından yüklenen örnek veriden veya sıfırdan tanımlanan kolonlardan **gerçekçi sentetik veri setleri** üretmek üzere tasarlanmış bir veri üretim modülüdür.
 
-The agent allows users to create artificial datasets based on predefined schemas or simple configuration rules, without requiring access to sensitive production data. It is particularly valuable in environments where data privacy, security, and regulatory constraints prevent the use of real datasets.
+İki tamamlayıcı modu vardır: **Upload mode** (yüklenen örnek dosyanın şemasını otomatik çıkarır ve aynı yapıda yeni veri üretir) ve **Scratch mode** (sıfırdan kolon-kolon tanımlanan veri setini sıfırdan inşa eder). Her iki mod da aynı üretim motoru, aynı gürültü/kalite kontrolleri ve aynı export seçeneklerini (CSV, Excel, JSON) kullanır. Test, demo, eğitim ve geliştirme süreçleri için **production verisine alternatif** sağlar.
 
-This agent focuses on fast, controlled, and explainable data generation using rule-based and statistical approaches rather than complex modeling techniques.
-
----
-
-## Purpose
-In enterprise environments, especially in banking, accessing real data for development, testing, or demonstrations is often restricted due to privacy and compliance requirements.
-
-The purpose of the Mock Data Generator Agent is to:
-- Enable safe data sharing without exposing sensitive information
-- Support rapid prototyping and testing
-- Provide realistic datasets for demos and presentations
-- Reduce dependency on production data
-- Accelerate development and validation workflows
+> ⚠️ **LLM entegrasyonu kullanılmaz.** Mevcut versiyon tamamen kural tabanlı (rule-based) ve istatistiksel üretim üzerine kuruludur. Faker kütüphanesi kullanıcı tarafında dağıtılan deterministik kalıplarla çalışır; dış AI servislerine bağımlılık yoktur.
 
 ---
 
-## Core Capabilities
+## 🎯 Project Purpose
+Kurumsal ortamlarda — özellikle bankacılıkta — **gerçek veriye gizlilik ve uyum nedenleriyle erişim sınırlıdır**. Mock Data Generator, geliştirme, test, demo ve eğitim süreçlerinde **gerçek veri açığa çıkmadan** çalışmak için güvenli bir alternatif üretir.
 
-### 1. Schema-Based Data Generation
-Users can define a dataset schema and generate structured data accordingly.
-
-Supported column types:
-- Numeric (integer, float)
-- Categorical
-- Date / datetime
-- Boolean
-- Text (names, cities, IDs, etc.)
+Sadece rastgele veri üretmenin ötesine geçerek, **şema tutarlılığı, kolon tipi uyumluluğu, kategorik ağırlık dağılımları, korelasyon kuralları, iş kuralları ve gürültü modlarını** destekleyerek üretilen verinin **gerçek dünyaya benzer davranmasını** hedefler.
 
 ---
 
-### 2. Configurable Value Generation
-Each column can be configured with generation rules such as:
+## 👥 Target Use Cases
 
-#### Numeric
-- Range-based (min, max)
-- Distribution-based (normal, uniform)
+### 1. Development & Testing
+- Production verisi olmadan unit / integration test
+- Performans testlerinde gerçekçi büyüklükte veri (1M satıra kadar)
+- Edge-case test verisi (gürültülü mod ile)
 
-#### Categorical
-- Predefined value list
-- Weighted probabilities
+### 2. Demo & Training
+- Müşteri / iç ekip demolarında gerçekçi veri ile sunum
+- Eğitim materyallerinde anonimleştirilmiş veri seti
+- Onboarding sürecinde yeni ekip üyelerine güvenli veri paylaşımı
 
-#### Date
-- Date range generation
-- Sequential or random dates
-
-#### Boolean
-- True/False with probability
-
----
-
-### 3. Realistic Data Generation (Faker Integration)
-The agent can generate realistic fields such as:
-- Names
-- Emails
-- Phone numbers
-- Cities
-- Addresses
-- Company names
+### 3. Data Pipeline & ML Prototyping
+- ML pipeline geliştirmede şemaya uyumlu mock veri
+- Schema migration testlerinde format ve tip uyumluluğu doğrulama
+- Diğer AI Hub agent'larına (anomaly-detection, segment-intelligence vb.) input olarak kullanım
 
 ---
 
-### 4. Row Volume Control
-Users can define:
-- Number of rows to generate
-- Dataset size scaling
+## ⚙️ End-to-End Workflow
+
+Uygulama ana sayfa (mode picker) ile başlar; iki mod 3 adımlı sihirbaz olarak ilerler.
+
+### Upload Mode (örnek dosyadan ölçekleme)
+
+1. **Yükleme** — Kullanıcı CSV / Excel dosyası yükler; önizleme + istatistikler gösterilir.
+2. **Şema Analizi** — `analyzer/schema_analyzer.py` her kolonu profiller:
+   - Tip tespiti: `numeric_int / numeric_float / categorical / datetime / boolean / text / faker / id / pattern`
+   - İstatistik çıkarımı (min/max/mean/std, dağılım, ağırlık)
+   - Faker hint tespiti (kolon adı regex eşleşmesi: email, phone, city, vb.)
+3. **Yapılandırma** — Her kolon için interaktif kart:
+   - Tip override
+   - Faker provider seçimi
+   - Tip-spesifik parametreler (numeric: min/max/mean/std, datetime: tarih aralığı, vb.)
+4. **Genel Ayarlar (sidebar)** — satır sayısı, Faker locale, kalite modu, iş kuralları, korelasyon kuralları
+5. **Üretim** — Engine kolonları üretir, korelasyonları uygular, iş kurallarını filtreler, gürültüyü enjekte eder
+6. **Karşılaştırma & Export** — Orijinal vs üretilen istatistikler yan yana; CSV / Excel / JSON indirme
+
+### Scratch Mode (sıfırdan tasarım)
+
+1. **Veri Seti Ayarları** — satır sayısı, başlangıç kolon sayısı, Faker locale
+2. **Sütun Tanımlama** — Her kolon için modüler kart:
+   - Kullanıcı dostu tip seçimi (Tam Sayı, Ondalık, Kategorik, E-posta, Telefon, İsim, ID, Özel Desen, vb.)
+   - Tip-spesifik parametreler
+   - `nullable` ve `unique` flag'leri
+3. **Üretim** — Aynı engine, aynı export seçenekleri (orijinal-üretilen karşılaştırma yok)
 
 ---
 
-### 5. Business Rule Enforcement
-The agent supports simple logical constraints such as:
-- Age ≥ 18
-- Salary > 0
-- Transaction amount depends on customer segment
+## 🧩 Architecture Overview
 
-This ensures generated data is not only random but also logically consistent.
+**Core Layers:**
 
----
+- **Analyzer Layer (`analyzer/schema_analyzer.py`)**
+  Yüklenen veri setinin şemasını çıkarır: kolon tipi tespiti, istatistik üretimi, Faker hint regex eşleşmesi. `format="mixed"` ile mixed-format datetime kolonlarını da güvenli şekilde tanır (`errors="coerce"` ile bozuk değerleri atar).
 
-### 6. Correlation Awareness (Basic Level)
-The agent can simulate simple relationships between variables:
-- Higher income → higher transaction amount
-- Older age → higher balance (optional logic)
+- **Generator Layer (`generator/`)**
+  Tip başına bağımsız üretici modüller:
+  - `numeric.py` — normal / uniform dağılım, sequential mod, IQR clip
+  - `categorical.py` — değer + ağırlık tabanlı sampling
+  - `datetime_gen.py` — tarih aralığı, business days, sequential
+  - `boolean_gen.py` — true_ratio, format (True/False, Yes/No, Evet/Hayır, 1/0)
+  - `text.py` — Faker provider veya rastgele metin
+  - `id_gen.py` — prefix + zero-padded sequential / random unique ID
+  - `pattern_gen.py` — regex-benzeri pattern (`#` rakam, `@` büyük harf, `&` küçük harf, vb.)
+  - `correlations.py` — rank tabanlı pozitif/negatif korelasyon enjeksiyonu
+  - `noise.py` — null/outlier/duplicate/typo/whitespace/format inconsistency
+  - `engine.py` — orchestrator: tüm üreticileri sıraya koyup iş kurallarını uygular
 
----
+- **UI Layer (`ui/`)**
+  Streamlit sayfa mimarisi: home → mode → 3-step wizard. Yeniden kullanılabilir bileşenler (`components.py`).
 
-### 7. Noise Injection (Optional)
-Users can optionally introduce controlled noise:
-- Missing values
-- Random outliers
-- Slight inconsistencies
-
-This helps simulate real-world imperfect data.
-
----
-
-### 8. Export Options
-Generated datasets can be exported in:
-- CSV format
-- Excel (XLSX) format
+- **Utils Layer (`utils/`)**
+  I/O helper'ları (CSV/Excel okuma, çıktı bytes), sabitler (TYPE_OPTIONS, USER_TYPES, FAKER_PROVIDERS, LOCALE_OPTIONS), Streamlit version compat.
 
 ---
 
-## Target Users
-This agent is designed for:
+## 🤖 Model & Technology Stack
 
-- Data scientists and ML engineers
-- Software developers
-- QA and testing teams
-- Business analysts
-- Product teams
-- Internal demo and training teams
+### Generation Approach
+- Klasik istatistiksel üretim (NumPy random distributions)
+- Faker tabanlı gerçekçi metin (name, email, phone, city, IBAN, vb.)
+- Pattern tabanlı string üretimi (regex-benzeri sembol dili)
+- Rank tabanlı korelasyon enjeksiyonu (Spearman benzeri)
+- Pandas query ile iş kuralı filtresi
 
----
-
-## Example Use Cases
-
-### Example 1: Testing a Data Pipeline
-A developer needs a dataset with customer transactions to test an ETL pipeline. The agent generates a structured dataset with realistic distributions and relationships.
-
----
-
-### Example 2: Demo Environment Preparation
-A team needs to demonstrate a product without exposing real customer data. The agent generates a realistic but fully synthetic dataset.
+### Backend & UI
+- Python (3.10+)
+- Pandas / NumPy
+- Faker (locale: en_US, tr_TR, de_DE, fr_FR, es_ES)
+- Streamlit (UI)
+- OpenPyXL (Excel export)
 
 ---
 
-### Example 3: Model Development Without Production Data
-A data scientist wants to prototype a model but cannot access real data. The agent creates a dataset with similar structure and variability.
+## 🧠 Generation Strategy
+
+Mock veri üretimi **tip uyumluluğu, istatistiksel benzerlik ve kontrol edilebilirlik** üzerine kuruludur:
+
+- **Şema sadakati** — Upload modunda orijinal kolon tipleri, dağılımları ve null oranları korunur
+- **Kullanıcı kontrolü** — Otomatik tespitin üzerine her kolon için manuel override mümkün
+- **Gürültü ayarlanabilir** — "Temiz" mod default; "Gerçek Dünya (Gürültülü)" modu null/outlier/duplicate/typo/whitespace/format inconsistency oranlarını ayrı ayrı kontrol eder
+- **Korelasyon enjeksiyonu** — Sayısal kolonlar arası rank tabanlı pozitif/negatif korelasyon (0–1 strength)
+- **İş kuralı filtreleri** — Pandas query syntax (`age >= 18 and salary > 0`); 3 retry ile yeterli satır toplanmaya çalışılır
+- **Uniqueness garantisi** — `unique=True` flag'li kolonlarda 5 retry ile dup eliminate
+
+LLM kullanılmaz — tüm üretim deterministik (random seed olmadan da tekrarlanabilir karakteristik) ve dış servis bağımlılığı yoktur.
 
 ---
 
-### Example 4: Training and Onboarding
-New employees need sample datasets to practice analysis and reporting tasks.
+## 📊 Example Output
+
+Her üretim oturumunda sistem aşağıdaki çıktıları üretir:
+
+### Ekran Üstü
+- Üretilen satır / sütun / null sayımları
+- İlk 100 satır önizlemesi
+- Sütun bazlı tip + boş değer + benzersiz değer özeti
+- (Upload modunda) Orijinal ve üretilen veri yan yana istatistik karşılaştırması: numeric için describe, categorical için bar chart, boolean için True/False sayıları
+
+### Indirme Çıktıları
+- `sentetik_veri.csv` — UTF-8 CSV
+- `sentetik_veri.xlsx` — Excel (openpyxl), tek sheet
+- `sentetik_veri.json` — pretty-printed records (`force_ascii=False` Türkçe karakter desteği için)
+
+### Desteklenen Tip ve Formatlar
+
+| Tip | Üretilen Değer Örneği |
+|-----|----------------------|
+| `numeric_int` | 25, 47, 33 (normal dist, min=18, max=70) |
+| `numeric_float` | 12345.67 (decimals=2, allow_negative=True) |
+| `categorical` | "Bireysel" / "Ticari" / "Kurumsal" (ağırlıklı sampling) |
+| `datetime` | 2024-03-15 (start/end aralığında, business_days_only opsiyonel) |
+| `boolean` | True / False, Yes / No, Evet / Hayır, 1 / 0 |
+| `faker.email` | jdoe@example.com |
+| `faker.phone_number` | (641)972 1729 |
+| `id` | CUST-000001, CUST-000002 (prefix + zero-pad) |
+| `pattern` | "AB-1234-XY" (`@@-####-@@` pattern) |
+| `text` | Faker sentence/text/word avg_length'e göre |
 
 ---
 
-## End-to-End Workflow
+## 🔐 Banking & Compliance Considerations
 
-1. User selects dataset generation mode:
-   - Schema-based generation
+- **Production verisi gerekmez** — Kullanım amacının özünü oluşturur; tüm üretim deterministik kalıplardan ve istatistiklerden gelir
+- Yüklenen örnek dosya **lokal olarak işlenir**, dış servise gönderilmez
+- LLM kullanımı yoktur — gizli/hassas veri içeren prompt riski yoktur
+- Faker provider'ları **gerçek kişilere ait olmayan** kalıplardan üretir (random isim/email/telefon)
+- Excel/CSV/JSON çıktıları kurumsal denetim ve paylaşım için hazır formattadır
+- 1.000.000 satıra kadar üretim destekli; bellek limiti uyarısı 500.000 satırda gösterilir
+- ID kolonları zero-padded sequential olarak gerçek müşteri ID kalıplarına benzeyecek şekilde tasarlanır ama tamamen sentetiktir
 
-2. User defines:
-   - Column names
-   - Data types
-   - Value generation rules
+---
 
-3. User sets parameters:
-   - Number of rows
-   - Optional noise level
-   - Optional business rules
+## 🚀 Business Impact
 
-4. Agent generates dataset
+- Geliştirme ve test süreçlerinde **production verisine bağımlılığı ortadan kaldırır**
+- Demo ve eğitimlerde gerçekçi veri ile sunum kolaylığı sağlar
+- ML model prototiplemede schema-uyumlu mock dataset üretir
+- Veri ekipleri için onboarding sürecini hızlandırır
+- 1M satıra kadar performans testleri için gerçekçi veri sağlar
+- AI Hub içindeki diğer agent'lara (anomaly-detection, segment-intelligence, forecasting) input olarak kullanılabilir
+- Korelasyon ve iş kuralları sayesinde üretilen veri downstream model davranışını gerçekçi şekilde test eder
 
-5. User previews generated data
+---
 
-6. User downloads dataset in desired format
+## 🔮 Future Enhancements
+
+- LLM tabanlı kolon adından akıllı tip önerme
+- Multi-column constraint (örn. yas + dogum_tarihi tutarlılık)
+- Time-series sentetik veri üretimi (trend + sezonsallık + gürültü)
+- Reproducibility: random seed kontrolü ile tekrarlanabilir üretim
+- Schema export/import: konfigürasyon JSON olarak kaydedilip paylaşılabilir
+- Domain-spesifik şablonlar (banking, e-commerce, healthcare)
+- Differential privacy garantileri (k-anonymity, ε-DP)
+- Datetime için saat-dakika dağılımı (rush hour vb.) modellemesi

@@ -60,6 +60,13 @@ def render():
 
         st.divider()
 
+        st.subheader("İş Kuralları")
+        st.caption("Pandas sorgu ifadelerini her satıra bir tane gelecek şekilde girin.\nÖrnek: `age >= 18`")
+        rules_text = st.text_area("Kurallar", value="", height=100, key="business_rules")
+        business_rules = [r.strip() for r in rules_text.strip().split("\n") if r.strip()]
+
+        st.divider()
+
         st.subheader("Korelasyon Kuralları")
         num_corr_rules = st.number_input("Kural sayısı", 0, 10, 0, key="num_corr")
         correlation_rules = []
@@ -98,6 +105,7 @@ def render():
         "locale": locale,
         "noise_config": noise_config if noise_config else None,
         "correlation_rules": correlation_rules if correlation_rules else None,
+        "business_rules": business_rules if business_rules else None,
     }
 
     st.divider()
